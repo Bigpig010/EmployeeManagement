@@ -16,7 +16,6 @@ while True:
         break
     elif choice == '1':
         MaNV= input('Enter employee id: ')
-        # manager.check_employee(MaNV, employee)
         HoTen= input('Enter full name: ')
         NgaySinh= input('Enter date of birth: ')
         Phai= input('Enter gender: ')
@@ -24,6 +23,7 @@ while True:
         Phong= input('Enter departments: ')
         employee= Employees(MaNV, HoTen, NgaySinh, Phai, Diachi, Phong)
         manager.add_employee(employee)
+      
     elif choice == '2':
         MaNV= input('Enter employee id you want edit: ')
         print('Ener the new info for the employee: ')
