@@ -1,0 +1,1 @@
+[{"MaNV": "1", "HoTen": "Pham Phan Minh Triet", "NgaySinh": "20/12/2003", "Phai": "Male", "DiaChi": "12/12/412", "Phong": "3"}, {"MaNV": "3", "HoTen": "AnTran", "NgaySinh": "20/6/2003", "Phai": "Male", "DiaChi": "120/12", "Phong": "1"}, {"MaNV": "2", "HoTen": "Minh Nhut", "NgaySinh": "29/5/2003", "Phai": "Male", "DiaChi": "201/12", "Phong": "2"}]
