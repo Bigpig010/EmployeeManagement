@@ -23,6 +23,7 @@ while True:
         Phong= input('Enter departments: ')
         employee= Employees(MaNV, HoTen, NgaySinh, Phai, Diachi, Phong)
         manager.add_employee(employee)
+        manager.view_raw_data()
       
     elif choice == '2':
         MaNV= input('Enter employee id you want edit: ')
@@ -42,4 +43,6 @@ while True:
         manager.view_employee_by_departments_type(Phong)
     elif choice == '5':
         manager.view_raw_data()
-
+    elif choice > "5":
+        print('Error: Wrong choices, Please Try Again!!! (From 0 to 5)')
+        
