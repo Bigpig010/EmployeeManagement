@@ -26,6 +26,7 @@ while True:
         manager.view_raw_data()
       
     elif choice == '2':
+        manager.view_raw_data()
         MaNV= input('Enter employee id you want edit: ')
         edit= input('Are you sure want to edit employee\'s information (Y/N) : ').lower()
         if edit  != 'y':
@@ -51,4 +52,3 @@ while True:
         manager.view_raw_data()
     elif choice > "5":
         print('Error: Wrong choices, Please Try Again!!! (From 0 to 5)')
-        
