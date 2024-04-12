@@ -37,7 +37,7 @@ while True:
         manager.edit_employee(MaNV, new_data)
     elif choice == '3':
         MaNV= input('Enter employee id you want delete: ')
-        manager.detele_employee(MaNV) 
+        manager.delete_employee(employee) 
     elif choice == '4':
         Phong= input('Enter the departments type you want to view: ')
         manager.view_employee_by_departments_type(Phong)

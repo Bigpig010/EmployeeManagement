@@ -32,7 +32,7 @@ class EmployeeManager:
                 return
             print('Error: Employee not found!')
         
-    def detele_employee(self, MaNV):
+    def delete_employee(self, MaNV):
         self.employees= [e for e in self.employees if e['MaNV'] != MaNV]
         self.save_data()
         
