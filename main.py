@@ -29,22 +29,20 @@ while True:
         manager.view_raw_data()
         MaNV= input('Enter employee id you want edit: ')
         edit= input('Are you sure want to edit employee\'s information (Y/N) : ').lower()
-        if edit  != 'y':
-            break
-        print('Ener the new info for the employee: ')
-        HoTen= input('Enter full name: ')
-        NgaySinh= input('Enter date of birth: ')
-        Phai= input('Enter gender: ')
-        Diachi= input('Enter address: ')
-        Phong= input('Enter departments: ')
-        new_data= {'HoTen': HoTen, 'NgaySinh': NgaySinh, 'Phai': Phai, 'DiaChi': Diachi, 'Phong': Phong}
-        manager.edit_employee(MaNV, new_data)
+        if edit  == 'y':
+            print('Ener the new info for the employee: ')
+            HoTen= input('Enter full name: ')
+            NgaySinh= input('Enter date of birth: ')
+            Phai= input('Enter gender: ')
+            Diachi= input('Enter address: ')
+            Phong= input('Enter departments: ')
+            new_data= {'HoTen': HoTen, 'NgaySinh': NgaySinh, 'Phai': Phai, 'DiaChi': Diachi, 'Phong': Phong}
+            manager.edit_employee(MaNV, new_data)
     elif choice == '3':
         MaNV= input('Enter employee id you want delete: ')
         delete= input('Are you sure want to delete employee\'s information (Y/N) : ').lower()
-        if delete  != 'y':
-            break
-        manager.delete_employee(employee)
+        if delete  == 'y':
+            manager.delete_employee(employee)
     elif choice == '4':
         Phong= input('Enter the departments type you want to view: ')
         manager.view_employee_by_departments_type(Phong)
