@@ -27,6 +27,9 @@ while True:
       
     elif choice == '2':
         MaNV= input('Enter employee id you want edit: ')
+        edit= input('Are you sure want to edit employee\'s information (Y/N) : ').lower()
+        if edit  != 'y':
+            break
         print('Ener the new info for the employee: ')
         HoTen= input('Enter full name: ')
         NgaySinh= input('Enter date of birth: ')
@@ -37,7 +40,10 @@ while True:
         manager.edit_employee(MaNV, new_data)
     elif choice == '3':
         MaNV= input('Enter employee id you want delete: ')
-        manager.delete_employee(employee) 
+        delete= input('Are you sure want to delete employee\'s information (Y/N) : ').lower()
+        if delete  != 'y':
+            break
+        manager.delete_employee(employee)
     elif choice == '4':
         Phong= input('Enter the departments type you want to view: ')
         manager.view_employee_by_departments_type(Phong)
