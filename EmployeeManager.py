@@ -17,10 +17,6 @@ class EmployeeManager:
             json.dump(self.employees, f)
             
     def add_employee(self, employee):
-        for e in self.employees:
-            if e['MaNV'] == employee.MaNV:
-                print(f'Error: Employee with id {employee.MaNV} already exists!')
-                return
         self.employees.append(employee.__dict__) 
         self.save_data()
         
@@ -29,8 +25,6 @@ class EmployeeManager:
             if e['MaNV'] == MaNV:
                 e.update(new_data)
                 self.save_data()
-                return
-            print('Error: Employee not found!')
         
     def delete_employee(self, MaNV):
         self.employees= [e for e in self.employees if e['MaNV'] != MaNV]
@@ -56,9 +50,8 @@ class EmployeeManager:
     def get_raw_data(self):
         return self.employees
     
-    # def check_employee_exists(self, MaNV):
-    #     for e in self.employees:
-    #         if e['MaNV'] == MaNV:
-    #             print( f'Error: Employee with id {MaNV} already exists!')
-    #             return True
-        # self.add_employee()
+    def check_employee_exists(self, MaNV):
+        for e in self.employees:
+            if e['MaNV'] == MaNV:
+                return True
+        return False
