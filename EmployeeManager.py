@@ -56,3 +56,9 @@ class EmployeeManager:
     def get_raw_data(self):
         return self.employees
     
+    # def check_employee_exists(self, MaNV):
+    #     for e in self.employees:
+    #         if e['MaNV'] == MaNV:
+    #             print( f'Error: Employee with id {MaNV} already exists!')
+    #             return True
+        # self.add_employee()
