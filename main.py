@@ -20,7 +20,7 @@ while True:
             print(f'Error: Employee with id {MaNV} already exists!')
         else:
             HoTen= input('Enter full name: ')
-            NgaySinh= input('Enter date of birth (Only number): ')
+            NgaySinh= manager.get_formatted_date()
             Phai = input('Enter gender (Male/Female): ')
             Diachi= input('Enter address: ')
             Phong= input('Enter departments: ')
@@ -43,7 +43,7 @@ while True:
             else:
                 print('Enter the new info for the employee: ')
                 HoTen = input('Enter full name: ')
-                NgaySinh = input('Enter date of birth (Only number): ')
+                NgaySinh = manager.get_formatted_date()
                 Phai = input('Enter gender (Male/Female): ')
                 Diachi = input('Enter address: ')
                 Phong = input('Enter departments: ')
