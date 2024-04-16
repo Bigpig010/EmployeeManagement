@@ -1,5 +1,6 @@
 import json
 from prettytable import PrettyTable
+from datetime import datetime
 class EmployeeManager:
     def __init__(self):
         self.employees = []
@@ -16,6 +17,27 @@ class EmployeeManager:
         with open('DuLieu.txt', 'w') as f:
             json.dump(self.employees, f)
             
+    def check_employee_exists(self, MaNV):
+        for e in self.employees:
+            if e['MaNV'] == MaNV:
+                return True
+        return False
+    
+    @staticmethod
+    def get_formatted_date():
+        while True:
+            date_str = input("Enter your date of birth (DD/MM/YYYY): ")
+
+            try:
+                # Chuyển đổi chuỗi ngày tháng năm nhập vào thành đối tượng datetime
+                date_obj = datetime.strptime(date_str, "%d/%m/%Y")
+                # Định dạng lại đối tượng datetime thành chuỗi theo format mong muốn
+                formatted_date = date_obj.strftime("%d/%m/%Y")
+                return formatted_date
+            except ValueError:
+                print("Invalid date format. Please enter the date in the format DD/MM/YYYY.")
+
+    
     def add_employee(self, employee):
         self.employees.append(employee.__dict__) 
         self.save_data()
@@ -50,8 +72,3 @@ class EmployeeManager:
     def get_raw_data(self):
         return self.employees
     
-    def check_employee_exists(self, MaNV):
-        for e in self.employees:
-            if e['MaNV'] == MaNV:
-                return True
-        return False
