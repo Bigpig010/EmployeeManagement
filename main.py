@@ -93,6 +93,9 @@ while True:
                 else:
                 print("'Address' cannot be blank. Please Try Again!!!.")
             Phong= input('Enter departments: ')
+            if not Phong.isdigit()
+                print('Error: Departments type must be a number, Please Try Again!!!')
+            continue
                 if Phong.strip()
                     continue
                 else:
