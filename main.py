@@ -118,7 +118,6 @@ while True:
                     add = input("Do you want edit other employee's information? (Y/N) : ").lower()
                     if add != 'y': break
                         
-
     elif choice == "3":
         manager.view_raw_data()
         while True:
