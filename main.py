@@ -21,8 +21,8 @@ while True:
                 MaNV = input("Enter employee id: ")
                 if not MaNV.isdigit():
                     print("Error: Employee id must be a number, Please Try Again!!!")
-                else:
-                    break
+                else: break
+                    
 
             if manager.check_employee_exists(MaNV):
                 print(f"Error: Employee with id {MaNV} already exists!")
@@ -32,40 +32,33 @@ while True:
                 HoTen = input("Enter full name: ")
                 if HoTen.strip() == "":
                     print("'Full name' cannot be blank. Please Try Again!!!.")
-                else:
-                    break
+                else: break
 
             NgaySinh = manager.get_formatted_date()
 
             while True:
                 Phai = input("Enter gender (Male/Female): ")
-                if Phai in ["Male", "Female"]:
-                    break
-                else:
-                    print("Error: Gender must be 'Male' or 'Female'. Please Try Again!!!.")
+                if Phai in ["Male", "Female"]: break
+                else: print("Error: Gender must be 'Male' or 'Female'. Please Try Again!!!.")
 
             while True:
                 Diachi = input("Enter address: ")
                 if Diachi.strip() == '':
                     print("'Address' cannot be blank. Please Try Again!!!.")
-                else:
-                    break
-
+                else: break
+                    
             while True:
                 Phong = input("Enter departments: ")
                 if Phong.strip() == '':
                     print("Departments cannot be blank. Please Try Again!!!.")
-                else:
-                    break
+                else: break
 
             employee = Employees(MaNV, HoTen, NgaySinh, Phai, Diachi, Phong)
             manager.add_employee(employee)
             manager.view_raw_data()
 
             add = input("Do you want add employees? (Y/N) : ").lower()
-            if add != 'y':
-                break
-
+            if add != 'y': break
 
     elif choice == "2":
         manager.view_raw_data()
@@ -74,8 +67,8 @@ while True:
                 MaNV = input("Enter employee id you want edit: ")
                 if not MaNV.isdigit():
                     print("Error: Employee id must be a number, Please Try Again!!!")
-                else:
-                    break
+                else: break
+                    
             edit = input("Are you sure want to edit employee's information (Y/N) : ").lower()
             if edit == "y":
                 # Kiểm tra xem MaNV có tồn tại trong danh sách nhân viên không
@@ -92,8 +85,8 @@ while True:
                         HoTen = input("Enter full name: ")
                         if HoTen.strip() == "":
                             print("'Full name' cannot be blank. Please Try Again!!!.")
-                        else:
-                            break
+                        else: break
+                            
                     NgaySinh = manager.get_formatted_date()
                     
                     while True:
@@ -101,7 +94,6 @@ while True:
                         if Phai in ["Male", "Female"]: break
                         else: print("Error: Gender must be 'Male' or 'Female'. Please Try Again!!!.")
                             
-                    
                     while True:
                         Diachi = input("Enter address: ")
                         if Diachi.strip() == '':
@@ -124,8 +116,8 @@ while True:
                     manager.edit_employee(MaNV, new_data)
                     manager.view_raw_data()
                     add = input("Do you want edit other employee's information? (Y/N) : ").lower()
-                    if add != 'y':
-                        break
+                    if add != 'y': break
+                        
 
     elif choice == "3":
         manager.view_raw_data()
